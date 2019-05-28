@@ -1,5 +1,5 @@
 * {
-  margin: 1px;
+  margin: 0px;
   padding: 0px;
 }
 
@@ -15,6 +15,7 @@ header {
   border-radius: 10px 10px 0 0;
   display: flex;
   flex-flow: row-wrap;
+  margin-top: 1px;
 }
 
 .titulo {
@@ -49,16 +50,85 @@ nav .actual {
 .Imagen-Central {
   background-color: #82c3a6;
   height: 400px;
+  text-align: center;
+  padding-top: 20px;
+}
+.Imagen-Central img {
+    width: 75%;
+    height: 95%;
+}
+
+.Img-sec img {
+width: 70%;
+padding-top: 0.8em;
 }
 
 .Img-sec {
   background-color: #d5c75f;
+  height: 280px;
+  display: flex;
+  flex-flow: row-wrap;
+  text-align: center;
+}
+
+img+h2 a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.galeria {
+  background-color: #d5c75f;
   height: 250px;
+  display: flex;
+  flex-flow: row-wrap;
+  text-align: center;
+  margin: 0px;
+}
+
+.galeria div{
+  width: 33.33%;
+}
+
+.galeria div img {
+  width: 95%;
+  padding: 20px 10px 20px 8px;
+}
+
+.galeria1 {
+  background-color: #d5c75f;
+  height: 250px;
+  display: flex;
+  flex-flow: row-wrap;
+  text-align: center;
+  margin: 0px;
+}
+
+.galeria1 div{
+  width: 33.33%;
+}
+
+.galeria1 div img {
+  width: 90%;
+  height: 90%;
+  padding: 10px 10px 0px 8px;
 }
 
 footer {
   background-color: #C6d5c5;
-  height: 150px;
+  height: 200px;
   margin-bottom: 15px;
   border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-flow: row-wrap;
+}
+
+footer div {
+  width: 25%;
+  margin-top: 25px;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+h2, h3 {
+  padding-top: 4px;
 }
