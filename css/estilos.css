@@ -3,6 +3,11 @@
   padding: 0px;
 }
 
+* img[src$=".jpg"] {
+  -webkit-filter: drop-shadow(2px 2px 2px #02010a);
+  filter: drop-shadow(2px 2px 2px #02010a);
+}
+
 body {
   background-color: #02010a;
   font-family: "Dancing Script";
@@ -16,6 +21,19 @@ header {
   display: flex;
   flex-flow: row-wrap;
   margin-top: 1px;
+  animation: slidein 3s;
+}
+
+@-webkit-keyframes slidein {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
 
 .titulo {
@@ -58,22 +76,51 @@ nav .actual {
     height: 95%;
 }
 
-.Img-sec img {
-width: 70%;
-padding-top: 0.8em;
-}
-
 .Img-sec {
   background-color: #d5c75f;
-  height: 280px;
+  height: 300px;
   display: flex;
   flex-flow: row-wrap;
   text-align: center;
 }
 
+.Img-sec h2 {
+  text-decoration: underline;
+}
+
+.Img-sec img {
+  width: 70%;
+}
+
 img+h2 a:visited {
   text-decoration: none;
   color: black;
+}
+
+.img-izq {
+  padding-top: 20px;
+}
+
+.img-izq img {
+  transition-duration: 1.5s;
+}
+
+.img-izq img:hover {
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+.img-der {
+  padding-top: 20px;
+}
+
+.img-der img {
+  transition-duration: 1.5s;
+}
+
+.img-der img:hover {
+  transform: translate(20px,-5px);
+  box-shadow: 2px 2px 2px #82c3a6;
 }
 
 .galeria {
@@ -94,23 +141,19 @@ img+h2 a:visited {
   padding: 20px 10px 20px 8px;
 }
 
-.galeria1 {
-  background-color: #d5c75f;
-  height: 250px;
-  display: flex;
-  flex-flow: row-wrap;
-  text-align: center;
-  margin: 0px;
+.img1 {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
 }
 
-.galeria1 div{
-  width: 33.33%;
+.img2, .img4, .img6 {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-.galeria1 div img {
-  width: 90%;
-  height: 90%;
-  padding: 10px 10px 0px 8px;
+.img3 {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
 }
 
 footer {
@@ -131,4 +174,17 @@ footer div {
 
 h2, h3 {
   padding-top: 4px;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 10%;
 }
